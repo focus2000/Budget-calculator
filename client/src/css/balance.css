@@ -1,0 +1,39 @@
+.balance {
+  margin:1rem 0
+}
+
+.balance h3 {
+  padding:0.5rem;
+  font-size:1.5rem
+}
+
+.balance h2 {
+  font-size:2rem
+}
+.balance p {
+  font-size:1.3rem
+}
+
+.income-expense {
+  margin:1.5rem 0;
+  padding:1rem ;
+  
+  
+}
+
+
+.plus,
+.minus {
+  margin: 0 2rem;
+}
+
+.plus {
+  color: #77c987;
+  margin-bottom:1rem;
+  padding:1rem;
+  font-size:20px
+}
+
+.minus {
+  color: #ff716e;
+}

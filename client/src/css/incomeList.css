@@ -1,0 +1,21 @@
+.transactions {
+    margin-top: 1rem;
+  }
+
+  .transactions h2 {
+    font-family: "Baloo da 2", serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .transaction-list {
+    width: 92%;
+    max-height: 35rem;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  
+  
