@@ -15,7 +15,7 @@ export const BudgetContextProvider = ({children}) => {
 
     const getIncomes = async () => {
         try {
-         const res = await axios.get('/incomes')
+         const res = await axios.get('https://income-expense-calculator.herokuapp.com/incomes')
          dispatch({
              type : 'GET_INCOMES',
              payload:res.data
@@ -31,7 +31,7 @@ export const BudgetContextProvider = ({children}) => {
 
          const getExpenses = async () => {
              try {
-             const res = await axios.get('/expenses')
+             const res = await axios.get('https://income-expense-calculator.herokuapp.com/expenses')
              dispatch({
                  type: 'GET_EXPENSES',
                  payload:res.data
@@ -51,7 +51,7 @@ export const BudgetContextProvider = ({children}) => {
             'Content-Type':'Application/json'
         }
         try {
-            const res = await axios.post('/incomes', incomeTransaction, config)
+            const res = await axios.post('https://income-expense-calculator.herokuapp.com/incomes', incomeTransaction, config)
             dispatch({
                 type:'ADD_INCOME',
                 payload:res.data
@@ -72,7 +72,7 @@ export const BudgetContextProvider = ({children}) => {
             'Content-Type' : 'Application/json'
         }
         try {
-            const res = await axios.post('/expenses', expenseTransaction, config)
+            const res = await axios.post('https://income-expense-calculator.herokuapp.com/expenses', expenseTransaction, config)
             dispatch({
                 type:'ADD_EXPENSE',
                 payload:res.data
@@ -90,7 +90,7 @@ export const BudgetContextProvider = ({children}) => {
 
     const deleteIncome = async (id) => {
         try {
-            await axios.delete(`/incomes/${id}`)
+            await axios.delete(`https://income-expense-calculator.herokuapp.com/incomes/${id}`)
             dispatch({
                 type: 'DELETE_INCOME',
                 payload:id,
@@ -109,7 +109,7 @@ export const BudgetContextProvider = ({children}) => {
 
     const deleteExpense =async  (id) => {
         try{
-            await axios.delete(`/expenses/${id}`)
+            await axios.delete(`https://income-expense-calculator.herokuapp.com/expenses/${id}`)
             dispatch({
                 type: 'DELETE_EXPENSE',
                 payload:id,
