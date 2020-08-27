@@ -34,6 +34,6 @@
     ]
     
   },
-  "proxy":"http://localhost:5000"
+  "proxy":"https://income-expense-calculator.herokuapp.com/"
   
 }
