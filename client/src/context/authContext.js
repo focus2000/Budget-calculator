@@ -29,7 +29,7 @@ export const AuthContextProvider = ({children}) => {
           }
 
           try {
-           const res = await axios.get('https://income-expense-calculator.herokuapp.com/auth')
+           const res = await axios.get('/auth')
            dispatch ({
                type: "SET_USER",
                payload:res.data
@@ -51,7 +51,7 @@ export const AuthContextProvider = ({children}) => {
             }
         }
         try {
-            const res = await axios.post('https://income-expense-calculator.herokuapp.com/register', userData, config)
+            const res = await axios.post('/register', userData, config)
             dispatch({
                 type: 'REGISTER_USER',
                 payload:res.data
@@ -78,7 +78,7 @@ const loginUser = async userData => {
         }
     }
     try {
-        const res = await axios.post('https://income-expense-calculator.herokuapp.com/auth', userData, config)
+        const res = await axios.post('/auth', userData, config)
         dispatch({
             type: 'LOGIN_USER',
             payload:res.data
